@@ -1,14 +1,31 @@
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class DayOfWeek {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2026, 8, 10);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println(date.getDayOfWeek());
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        System.out.print("Enter month: ");
+        int month = sc.nextInt();
+
+        System.out.print("Enter day: ");
+        int day = sc.nextInt();
+
+        LocalDate date = LocalDate.of(year, month, day);
+
+        System.out.println("Date: " + date);
+        System.out.println("Day: " + date.getDayOfWeek());
+
+        sc.close();
     }
 }
 
-
-
-output:
-MONDAY
+OUTPUT:
+Enter year: 2026
+Enter month: 8
+Enter day: 10
+Date: 2026-08-10
+Day: MONDAY
