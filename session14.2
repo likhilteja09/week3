@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ComparatorDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        System.out.println("Original List: " + list);
+
+        list.sort((a, b) -> b - a);
+
+        System.out.println("Descending Order: " + list);
+
+        sc.close();
+    }
+}
+
+output:
+Enter number of elements: 5
+Enter elements:
+20 5 40 10 30
+
+Original List: [20, 5, 40, 10, 30]
+Descending Order: [40, 30, 20, 10, 5]
