@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        System.out.println("Original List: " + list);
+
+        System.out.print("Enter element to add: ");
+        int add = sc.nextInt();
+        list.add(add);
+
+        System.out.println("After Adding: " + list);
+
+        System.out.print("Enter element to remove: ");
+        int remove = sc.nextInt();
+        list.remove(Integer.valueOf(remove));
+
+        System.out.println("After Removing: " + list);
+
+        sc.close();
+
+ output:
+ Enter number of elements: 4
+Enter elements:
+10 20 30 40
+
+Original List: [10, 20, 30, 40]
+Enter element to add: 50
+After Adding: [10, 20, 30, 40, 50]
+Enter element to remove: 20
+After Removing: [10, 30, 40, 50]
+    }
+}
