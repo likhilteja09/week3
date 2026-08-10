@@ -1,0 +1,39 @@
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+public class PriorityQueueDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            queue.add(sc.nextInt());
+        }
+
+        System.out.println("Elements in priority order:");
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+
+        sc.close();
+    }
+}
+
+otput:
+Enter number of elements: 5
+Enter elements:
+30 10 50 20 40
+
+Elements in priority order:
+10
+20
+30
+40
+50
