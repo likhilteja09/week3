@@ -1,0 +1,39 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        String[] numbers = new String[n];
+
+        System.out.println("Enter numbers:");
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.next();
+        }
+
+        Arrays.sort(numbers, (a, b) ->
+                (b + a).compareTo(a + b));
+
+        StringBuilder result = new StringBuilder();
+
+        for (String num : numbers) {
+            result.append(num);
+        }
+
+        System.out.println("Largest Number: " + result);
+
+        sc.close();
+
+output:
+Enter number of elements: 5
+Enter numbers:
+10 2 9 39 17
+
+Largest Number: 93921710
+    }
+}
