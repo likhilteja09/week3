@@ -1,14 +1,33 @@
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class DayOfYear {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2019, 2, 10);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println(date.getDayOfYear());
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        System.out.print("Enter month: ");
+        int month = sc.nextInt();
+
+        System.out.print("Enter day: ");
+        int day = sc.nextInt();
+
+        LocalDate date = LocalDate.of(year, month, day);
+
+        System.out.println("Date: " + date);
+        System.out.println("Day of Year: " + date.getDayOfYear());
+
+        sc.close();
     }
 }
 
 
+OUPUT:
+Enter year: 2026
+Enter month: 8
+Enter day: 10
+Date: 2026-08-10
+Day of Year: 222
 
-output:
-41
